@@ -1,6 +1,6 @@
 {
   "name": "@timeless-systems/logger-hapi-plugin",
-  "version": "0.1.4",
+  "version": "0.1.10",
   "description": "Hapi Plugin : Logger",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,7 +8,8 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "publish": "npm run build && npm pack && npm publish" 
   },
   "repository": {
     "type": "git",
