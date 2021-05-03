@@ -25,7 +25,12 @@ jobs:
         # Specifies the registry, this field is required!
         registry-url: https://npm.pkg.github.com/
     # clean install of your projects' deps. We use "npm ci" to avoid package lock changes
-    - run: npm ci
+    - run: |
+        npm ci
+      env:
+        # Use a token to publish to NPM. See below for how to set it up
+        #        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     # set up git since we will later push to the repo
     - run: git config --global user.name "GitHub CD bot"
     - run: git config --global user.email "github-cd-bot@timeless-systems.com"
