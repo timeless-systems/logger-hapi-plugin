@@ -1,7 +1,7 @@
 {
   "name": "@timeless-systems/logger-hapi-plugin",
-  "version": "0.1.3",
-  "description": "Hapi Plugin : Status",
+  "version": "0.1.4",
+  "description": "Hapi Plugin : Logger",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {

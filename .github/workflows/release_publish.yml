@@ -38,6 +38,8 @@ jobs:
         # Use a token to publish to NPM. See below for how to set it up
         #        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - run: |
+        npm run build
     - run: | 
         cat package.json
         npm pack
